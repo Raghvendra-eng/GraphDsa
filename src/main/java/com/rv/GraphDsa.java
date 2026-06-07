@@ -1,5 +1,6 @@
 package com.rv;
 
+import com.rv.problems.CountIsland;
 import com.rv.traversals.BFS;
 import com.rv.traversals.DFS;
 import com.rv.representation.AdjacencyList;
@@ -26,6 +27,10 @@ public class GraphDsa {
         BFS bfsObj = new BFS();
         bfsObj.bfsTraversal(graph, 0);
 
+        System.out.println();
 
+        // CountIsland
+        CountIsland ciObj = new CountIsland();
+        System.out.println(ciObj.countIsland());
     }
 }
