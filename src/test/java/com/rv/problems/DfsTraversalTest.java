@@ -1,7 +1,6 @@
 package com.rv.problems;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
@@ -19,7 +18,7 @@ public class DfsTraversalTest {
                 {2},
         };
         DfsTraversal dfsTraversal = new DfsTraversal();
-        Assert.assertEquals(Arrays.asList(0, 1, 2, 3, 4), dfsTraversal.DFS(adj, 0));
+        assertEquals(Arrays.asList(0, 1, 2, 3, 4), dfsTraversal.DFS(adj, 0));
     }
 
     @Test
@@ -32,6 +31,6 @@ public class DfsTraversalTest {
                 {2},
         };
         DfsTraversal dfsTraversal = new DfsTraversal();
-        Assert.assertEquals(Arrays.asList(0, 1, 2, 3, 4), dfsTraversal.DFS(adj, 0));
+        assertEquals(Arrays.asList(0, 1, 2, 3, 4), dfsTraversal.DFS(adj, 0));
     }
 }

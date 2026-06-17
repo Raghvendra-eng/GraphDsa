@@ -1,7 +1,8 @@
 package com.rv.problems;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ShortestPathBinaryWeightedTest {
     @Test
@@ -13,7 +14,7 @@ public class ShortestPathBinaryWeightedTest {
                 {4, 5, 1}, {5, 6, 1}, {6, 7, 1}, {7, 8, 1}
         };
         ShortestPathBinaryWeighted shortestPathBinaryWeighted = new ShortestPathBinaryWeighted();
-        Assert.assertEquals(new int[]{0, 0, 1, 1, 2, 1, 2, 1, 2}, shortestPathBinaryWeighted.shortestPath(src, edges));
+        assertEquals(new int[]{0, 0, 1, 1, 2, 1, 2, 1, 2}, shortestPathBinaryWeighted.shortestPath(src, edges));
     }
 
     @Test
@@ -25,6 +26,6 @@ public class ShortestPathBinaryWeightedTest {
                 {4, 5, 1}, {5, 6, 1}, {6, 7, 1}, {7, 8, 1}
         };
         ShortestPathBinaryWeighted shortestPathBinaryWeighted = new ShortestPathBinaryWeighted();
-        Assert.assertEquals(new int[]{0, 0, 1, 1, 2, 1, 2, 1, 2}, shortestPathBinaryWeighted.shortestPath(src, edges));
+        assertEquals(new int[]{0, 0, 1, 1, 2, 1, 2, 1, 2}, shortestPathBinaryWeighted.shortestPath(src, edges));
     }
 }

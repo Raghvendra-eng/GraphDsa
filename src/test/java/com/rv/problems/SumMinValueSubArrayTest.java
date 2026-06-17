@@ -1,7 +1,7 @@
 package com.rv.problems;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -12,7 +12,7 @@ public class SumMinValueSubArrayTest {
         int []nums = new int[]{3,1,2,4};
 
         SumMinValueSubArray obj = new SumMinValueSubArray();
-        Assert.assertEquals(17, obj.minValue(nums));
+        assertEquals(17, obj.minValue(nums));
     }
 
     @Test
@@ -20,7 +20,7 @@ public class SumMinValueSubArrayTest {
         int []nums = new int[]{11,81,94,43,3};
 
         SumMinValueSubArray obj = new SumMinValueSubArray();
-        Assert.assertEquals(444, obj.minValue(nums));
+        assertEquals(444, obj.minValue(nums));
     }
 
     @Test
@@ -28,7 +28,7 @@ public class SumMinValueSubArrayTest {
         int []nums = new int[]{2, 2};
 
         SumMinValueSubArray obj = new SumMinValueSubArray();
-        Assert.assertEquals(6, obj.minValue(nums));
+        assertEquals(6, obj.minValue(nums));
     }
 
 

@@ -1,8 +1,7 @@
 package com.rv.problems;
 
 import com.rv.entity.Tree;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -15,7 +14,7 @@ public class MaximumPathSumTest {
         head.right = new Tree(3);
 
         MaximumPathSum obj = new MaximumPathSum();
-        Assert.assertEquals(6, obj.maxSum(head));
+        assertEquals(6, obj.maxSum(head));
     }
 
     @Test
@@ -27,7 +26,7 @@ public class MaximumPathSumTest {
         head.right.right = new Tree(7);
 
         MaximumPathSum obj = new MaximumPathSum();
-        Assert.assertEquals(42, obj.maxSum(head));
+        assertEquals(42, obj.maxSum(head));
     }
 
     @Test
@@ -37,7 +36,7 @@ public class MaximumPathSumTest {
         head.right = new Tree(3);
 
         MaximumPathSum obj = new MaximumPathSum();
-        Assert.assertEquals(4, obj.maxSum(head));
+        assertEquals(4, obj.maxSum(head));
     }
 
 }
