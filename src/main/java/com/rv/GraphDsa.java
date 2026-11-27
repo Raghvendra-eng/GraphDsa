@@ -1,36 +1,33 @@
 package com.rv;
 
-import com.rv.problems.CountIsland;
-import com.rv.traversals.BFS;
-import com.rv.traversals.DFS;
-import com.rv.representation.AdjacencyList;
+import com.rv.infosys.LRUCache;
 
-import java.util.List;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.stream.Collectors;
 
 public class GraphDsa {
 
-    public static void main(String []args) {
-        int [][]edges = new int[][] {
-                {0, 1},
-                {1, 2},
-                {2, 3},
-                {3, 4},
-                {1, 4},
-                {4, 5},
-        };
-        List<List<Integer>> graph = AdjacencyList.createUndirectedAdjacencyList(edges, 6);
-        DFS dfsObj = new DFS();
-        dfsObj.dfsTraversal(graph, 0);
+    public static void  main(String args[]) {
 
-        System.out.println();
+        ExecutorService executor = Executors.newFixedThreadPool(2);
 
-        BFS bfsObj = new BFS();
-        bfsObj.bfsTraversal(graph, 0);
+        for ( int i = 0; i < 5; i++) {
+            final int taskId = i;
 
-        System.out.println();
+            executor.submit(() -> {
+                String threadName = Thread.currentThread().getName();
+                System.out.println("TaskId: " + taskId + " started execution on ThreadName: " + threadName);
 
-        // CountIsland
-        CountIsland ciObj = new CountIsland();
-        System.out.println(ciObj.countIsland());
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            });
+        }
+        executor.shutdown();
     }
+
+
 }

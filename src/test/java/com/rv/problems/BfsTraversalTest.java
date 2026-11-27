@@ -1,9 +1,10 @@
 package com.rv.problems;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BfsTraversalTest {
 
@@ -17,7 +18,7 @@ public class BfsTraversalTest {
                 {2},
         };
         BfsTraversal bfsTraversal = new BfsTraversal();
-        Assert.assertEquals(Arrays.asList(0, 1, 2, 3, 4), bfsTraversal.BFS(adj, 0));
+        assertEquals(Arrays.asList(0, 1, 2, 3, 4), bfsTraversal.BFS(adj, 0));
     }
 
 }
